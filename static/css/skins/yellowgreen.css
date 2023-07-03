@@ -1,0 +1,163 @@
+/* =================================================================== */
+/* Yellowgreen #9acd32
+====================================================================== */
+h1 > span,
+.projectmanager h3,
+.projectmanager li a,
+body.blog-page article h4:hover,
+.testimonials #quote-carousel h5,
+.services-box-item-content:before,
+.services-box-item-content h2,
+.social-icons ul li a:before,
+.info-map-boxes-item:before,
+.info-map-boxes-item h1,
+.info-map-boxes-item a,
+.about ul.nav.nav-tabs li a.active,
+.services-box-item-cover:before,
+.services-box-item-cover:after,
+#back-top span:before,
+.comments-list .comment-reply,
+.blog .blog-content .blog-excerpt .meta a,
+.blog .blog-content .blog-excerpt span i, .blog-page .blog-content  span i,
+.blog-post .banner .content .top-text h4 i,
+.blog-post .post-author a,
+.blog-page .meta a,
+.blog-page .sidebar .widget:not(.widget-tags) ul li a:hover,
+.blog-post .blog-content .comment-reply-link,
+.videopromotion a i,
+.fact-badges h2 span,
+.header-fixed .nav-menu ul.nav-menu-inner li a.current,
+span.heart,
+.nav-menu-icon.active a, .nav-menu-icon a.active, .nav-menu-icon:hover a, .nav-menu-icon a:hover, .nav-menu ul.nav-menu-inner li.active a, .nav-menu ul.nav-menu-inner li a.active, .nav-menu ul.nav-menu-inner li:hover a, .nav-menu ul.nav-menu-inner li a:hover, .header-fixed .nav-menu ul.nav-menu-inner li a.current, .header-fixed .nav-menu ul.nav-menu-inner li.current a
+body.dark .nav-menu-icon.active a, body.dark .nav-menu-icon a.active, body.dark .nav-menu-icon:hover a, body.dark .nav-menu-icon a:hover, body.dark .nav-menu ul.nav-menu-inner li.active a, body.dark .nav-menu ul.nav-menu-inner li a.active, body.dark .nav-menu ul.nav-menu-inner li:hover a, body.dark .nav-menu ul.nav-menu-inner li a:hover, body.dark .header-fixed .nav-menu ul.nav-menu-inner li a.current, body.dark .header-fixed .nav-menu ul.nav-menu-inner li.current a,
+.btn-wrapper a,
+.latest-post .post-title a:hover,
+body.dark .latest-post .post-title a:hover {
+    color: #9acd32;
+}
+.banner .breadcrumb>li a:hover,
+.custom-colorRotatingWords,
+.team .social-icons ul.social li a:hover,
+.team .social-icons ul.social li a:hover:before {
+	color: #9acd32 !important;
+}
+.latest-post .post-date,
+.custom-button,
+.portfolio .nav-pills li:hover,
+.portfolio .nav-pills li.active,
+#back-top a:hover,
+.social-icons ul li a:hover,
+.custom-input-label::before,
+.testimonials #quote-carousel .carousel-indicators .active,
+.custom-form-group  .input-group .input-group-addon,
+.submit-form button,
+.blog-page ul.pagination li.active a,
+.blog-page ul.pagination li.active a:hover,
+body.dark.blog-page ul.pagination li.active a,
+body.dark.blog-page ul.pagination li.active a:hover,
+body.double-diagonal .about::before, 
+body.double-diagonal .services::before, 
+body.double-diagonal .portfolio::before,
+body.double-diagonal .team::before,
+body.double-diagonal .blog::before,
+body.double-diagonal .contact::before,
+body.double-diagonal .logos::before,
+.team-member:hover .team-member-caption,
+.btn-wrapper a:hover,
+.widget-tags ul > li a:hover  {
+    background-color: #9acd32;
+}
+.widget-tags ul > li a:hover {
+	border:1px solid #9acd32;
+}
+.about-right-side .full-image-container.hovered:before  {
+	border-left: 5px solid #9acd32;
+}
+.projectmanager blockquote,
+#quote-carousel .carousel-indicators .active {
+    border-color: #9acd32;
+}
+.blog-page ul.pagination li.active a, body.dark.blog-page ul.pagination li.active a  {
+	border-color: #9acd32;
+}
+.projectmanagerpicture {
+    border: 12px solid #9acd32;
+}
+.portfolio .nav-pills li {
+    border: 2px solid #9acd32;
+}
+#back-top a {
+    border: 2px solid #9acd32;
+}
+.blog-page .banner .content .top-text hr {
+	border-top:5px solid #9acd32;
+}
+.portfolio .caption h3 {
+	border-left: 3px solid #9acd32;
+}
+.team-member-caption {
+	border-top: 3px solid #9acd32;
+}
+.social-icons ul.social-icons-team li a {
+	border: 2px solid #9acd32;
+}
+.social-icons ul li a{
+    border: 3px solid #9acd32;
+}
+.footer .social-icons ul li a {
+    border: 2px solid #9acd32;
+}
+.footer {
+    border-top: 2px solid #9acd32;
+}
+.social-icons ul.social-icons-team li a,
+.about .about-right-side:before {
+    border: 2px solid #9acd32;
+}
+.preloader .loader {
+  background-image: url(../../img/preloaders/preloader-yellowgreen-light.svg);
+  background-repeat:no-repeat;
+  background-position: 50% 50%;
+}
+body.dark .preloader .loader {
+  background-image: url(../../img/preloaders/preloader-yellowgreen-dark.svg);
+  background-repeat:no-repeat;
+  background-position: 50% 50%;
+}
+.btn-wrapper a {
+	border: 5px solid #9acd32;
+}
+.rtl-version .about-right-side .full-image-container.hovered:before {
+	border-right: 5px solid #9acd32;
+	border-left:0;
+}
+.rtl-version .projectmanager blockquote {
+	border-left: none;
+    border-right: 5px solid #9acd32;
+}
+.rtl-version .portfolio .caption h3 {
+	border-right: 3px solid #9acd32;
+}
+body.double-diagonal .about.safari::before {
+	background-image: url(../../img/safari-separators/separator-yellowgreen.png);
+	background-size:100% 100%;
+	background-repeat:no-repeat;
+}
+@media (max-width:767px){
+	.social-icons ul li a {
+		border: 2px solid #9acd32;
+	}
+	.about-right-side .full-image-container.hovered:before  {
+		border-top: 5px solid #9acd32;
+		border-left:none;
+	}
+	.rtl-version .about-right-side .full-image-container.hovered:before {
+		border-right:none;
+	}
+}
+@media (max-width:576px){
+	.about ul.nav.nav-tabs li a.active {
+		background :#9acd32;
+		color:#fff;
+	}
+}

@@ -1,0 +1,1104 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="../static/css/fontMfizz/font-mfizz.css">
+
+<div class="modal" id="messageModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                {% if flagStatus=="Başarılı!" %}
+                <p class="modal-title" style="color:#ffb400" align="center"><i class="fa-solid fa-check-double"></i>
+                    {{flagStatus}}</p>
+                {% else %}
+                <p class="modal-title" style="color:#ffb400" align="center"><i
+                        class="fa-regular fa-skull-crossbones"></i> {{flagStatus}}</p>
+                {% endif %}
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:#ffb400">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body" align="center">
+
+                {% if flagStatus=="Başarılı!" %}
+                <p class="modal-title" style="color:#ffb400" align="center">{{flagText}}</p>
+                {% else %}
+                <p class="modal-title" style="color:#ffb400" align="center">{{flagText}}</p>
+                {% endif %}
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<form method="POST" action="/send" enctype="multipart/form-data">
+
+    <div class="modal" id="KisiselTeklifAl" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="fw-normal" id="modal-title" style="color:#ffb400;" align="center">Kişisel Web Sitesi Formu
+                    </p>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:#ffb400">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body" align="center">
+
+                    <p class="fw-normal" style="color:#ffb400">İletişim Bilgileriniz</p>
+
+                    <div class="modal-body input-group mb-3" align="center">
+                        <tr>
+                            <td><input type="text" class="form-control" name="ad" placeholder="Adınız"
+                                    style="background-color: #242424;color: white; border:1px solid #ffb400;" required>
+                            </td>
+                            <td><input type="text" class="form-control" name="soyad" color="white"
+                                    placeholder="Soyadınız"
+                                    style="background-color: #242424;color: white; border:1px solid #ffb400;" required>
+                            </td>
+                            <input type="hidden" name="modalType" id="modalType" value="KisiselTeklifAl">
+                        </tr>
+
+
+                    </div>
+
+
+                    <div id="content" class="modal-body input-group mb-3" align="center">
+
+                        <tr>
+
+                            <td>
+                                <form action="">
+                                    <input type='text' class="form-control" id='phone0' name='telNo' aligin="left"
+                                        style="background-color: #242424;color: white; border:1px solid #ffb400;"
+                                        required></input>
+                                </form>
+                            </td>
+
+
+                            <td><input type="email" class="form-control" name="eMail" color="white"
+                                    placeholder="Mail Adresiniz"
+                                    style="background-color: #242424;color: white; border:1px solid #ffb400;" required>
+                            </td>
+
+                        </tr>
+                    </div>
+
+                    <hr />
+
+                    <div id="radios" class="modal-body">
+
+                        <p class="fw-normal" style="color:#ffb400">Hangi Tür Web Sitesi İstiyorsunuz ?</p>
+
+                        &#160;&#160;
+
+                        <input class="form-check-input" type="radio" name="web" value="wordpress" id="wp"
+                            style="border:2px solid orange; box-shadow:0 0 5px 0px #242424 inset;" checked>
+                        <label class="form-check-label" for="wp" style="color:#ffb400">Hazır Wordpress Site</label>
+
+                        &#160;&#160;&#160;&#160;&#160;&#160;
+
+                        <input class="form-check-input" type="radio" name="web" value="ozel" id="ozel"
+                            style="border:2px solid orange; box-shadow:0 0 5px 0px #242424 inset;">
+                        <label class="form-check-label" for="ozel" style="color:#ffb400">Özel Kodlanmış Site</label>
+
+                    </div>
+
+                    <hr />
+
+                    <div class="modal-body" align="center">
+
+                        <p class="fw-normal" style="color:#ffb400">Sayfa Sayısı ve Ayırmayı Düşündüğünüz Bütçe Nedir?
+                        </p>
+
+                        <div class="modal-body input-group mb-3" align="center">
+                            <tr>
+                                <td><input type="text" class="form-control" name="sayfasayisi" color="gray"
+                                        placeholder="Sayfa Sayısı Giriniz"
+                                        style="background-color: #242424;color: white; border:1px solid #ffb400; "
+                                        required>
+                                </td>
+                                <td><input type="text" class="form-control" name="butce" color="gray"
+                                        placeholder="Bütçeniz(₺)"
+                                        style="background-color: #242424;color: white; border:1px solid #ffb400;"
+                                        required></td>
+
+                            </tr>
+
+                        </div>
+
+                    </div>
+
+                    <hr />
+
+                    <div class="modal-body" align="center">
+
+                        <p class="fw-normal" style="color:#ffb400">Kısaca Diğer İsteklerinizden Bahsediniz</p>
+
+                        <textarea class="form-control" name="digeristekler" id="digeristekler" cols="42" rows="2"
+                            maxlength="300" style="background-color: #242424;color: white; border:1px solid #ffb400;"
+                            placeholder=" Diğer istekleriniz" required></textarea>
+                    </div>
+
+                    <hr />
+
+                    <div class="modal-body recaptcha0Dark" align="center">
+
+                        {{ recaptcha }}
+
+                    </div>
+
+                    <div class="modal-body recaptcha0Light" align="center">
+
+                        {{ recaptcha }}
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="modal-footer">
+
+                    <button type="submit" class="btn btn-secondary" onclick="deleteCaptch();">Gönder</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+<form method="POST" action="/send" enctype="multipart/form-data">
+
+    <div class="modal" id="KurumsalTeklifAl" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="fw-normal" id="modal-title" style="color:#ffb400;" align="center">Kurumsal Web Sitesi
+                        Teklif Formu</p>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:#ffb400">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body" align="center">
+
+                    <p class="fw-normal" style="color:#ffb400">İletişim Bilgileriniz</p>
+
+                    <div class="modal-body input-group mb-3" align="center">
+                        <tr>
+                            <td><input type="text" class="form-control" name="ad" placeholder="Adınız"
+                                    style="background-color: #242424;color: white; border:1px solid #ffb400;" required>
+                            </td>
+                            <td><input type="text" class="form-control" name="soyad" color="white"
+                                    placeholder="Soyadınız"
+                                    style="background-color: #242424;color: white; border:1px solid #ffb400;" required>
+                            </td>
+                            <input type="hidden" name="modalType" id="modalType" value="KurumsalTeklifAl">
+                        </tr>
+
+
+                    </div>
+
+                    <div id="content" class="modal-body input-group mb-3" align="center">
+
+                        <tr>
+
+                            <td>
+                                <form action="">
+                                    <input type='text' class="form-control" id='phone1' name='telNo' aligin="left"
+                                        style="background-color: #242424;color: white; border:1px solid #ffb400;"
+                                        required></input>
+                                </form>
+                            </td>
+
+
+                            <td><input type="email" class="form-control" name="eMail" color="white"
+                                    placeholder="Mail Adresiniz"
+                                    style="background-color: #242424;color: white; border:1px solid #ffb400;" required>
+                            </td>
+
+                        </tr>
+                    </div>
+
+                    <hr />
+
+                    <div class="modal-body" align="center">
+
+                        <p class="fw-normal" style="color:#ffb400">Kısaca Firmanızdan ve Faaileyet Alanından Bahsediniz
+                        </p>
+
+                        <textarea class="form-control" name="firma" id="digeristekler" cols="42" rows="2"
+                            maxlength="300" style="background-color: #242424;color: white; border:1px solid #ffb400;"
+                            placeholder=" Firmanız ve faaliyet alanlarınız" required></textarea>
+                    </div>
+
+                    <hr />
+
+                    <div id="radios" class="modal-body">
+
+                        <p class="fw-normal" style="color:#ffb400">Hangi Tür Web Sitesi İstiyorsunuz ?</p>
+
+                        &#160;&#160;
+
+                        <input class="form-check-input" type="radio" name="web" value="wordpress" id="wp0"
+                            style="border:2px solid orange; box-shadow:0 0 5px 0px #242424 inset;" checked>
+                        <label class="form-check-label" for="wp0" style="color:#ffb400">Hazır Wordpress Site</label>
+
+                        &#160;&#160;&#160;&#160;&#160;&#160;
+
+                        <input class="form-check-input" type="radio" name="web" value="ozel" id="ozel0"
+                            style="border:2px solid orange; box-shadow:0 0 5px 0px #242424 inset;">
+                        <label class="form-check-label" for="ozel0" style="color:#ffb400">Özel Kodlanmış Site</label>
+
+                    </div>
+
+                    <hr />
+
+                    <div class="modal-body" align="center">
+
+                        <p class="fw-normal" style="color:#ffb400">Sayfa Sayısı ve Ayırmayı Düşündüğünüz Bütçe Nedir?
+                        </p>
+
+                        <div class="modal-body input-group mb-3" align="center">
+                            <tr>
+                                <td><input type="text" class="form-control" name="sayfasayisi" color="gray"
+                                        placeholder="Sayfa Sayısı Giriniz"
+                                        style="background-color: #242424;color: white; border:1px solid #ffb400; "
+                                        required>
+                                </td>
+                                <td><input type="text" class="form-control" name="butce" color="gray"
+                                        placeholder="Bütçeniz(₺)"
+                                        style="background-color: #242424;color: white; border:1px solid #ffb400;"
+                                        required></td>
+
+                            </tr>
+
+                        </div>
+
+                    </div>
+
+                    <hr />
+
+                    <div class="modal-body" align="center">
+
+                        <p class="fw-normal" style="color:#ffb400">Kısaca Diğer İsteklerinizden Bahsediniz</p>
+
+                        <textarea class="form-control" name="digeristekler" id="digeristekler" cols="42" rows="2"
+                            maxlength="300" style="background-color: #242424;color: white; border:1px solid #ffb400;"
+                            placeholder=" Diğer istekleriniz" required></textarea>
+                    </div>
+
+                    <div class="modal-body recaptcha0Dark" align="center">
+
+                        {{ recaptcha }}
+
+                    </div>
+
+                    <div class="modal-body recaptcha0Light" align="center">
+
+                        {{ recaptcha }}
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-secondary" onclick="deleteCaptch();">Gönder</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+<form method="POST" action="/send" enctype="multipart/form-data">
+
+    <div class="modal" id="EntegrasyonTeklifAl" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="fw-normal" id="modal-title" style="color:#ffb400;" align="center">Entegrasyon Yazılım
+                        Teklif Formu</p>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:#ffb400">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body" align="center">
+
+                    <p class="fw-normal" style="color:#ffb400">İletişim Bilgileriniz</p>
+
+                    <div class="modal-body input-group mb-3" align="center">
+                        <tr>
+                            <td><input type="text" class="form-control" name="ad" placeholder="Adınız"
+                                    style="background-color: #242424;color: white; border:1px solid #ffb400;" required>
+                            </td>
+                            <td><input type="text" class="form-control" name="soyad" color="white"
+                                    placeholder="Soyadınız"
+                                    style="background-color: #242424;color: white; border:1px solid #ffb400;" required>
+                            </td>
+                            <input type="hidden" name="modalType" id="modalType" value="EntegrasyonTeklifAl">
+                        </tr>
+
+
+                    </div>
+
+                    <div id="content" class="modal-body input-group mb-3" align="center">
+
+                        <tr>
+
+                            <td>
+                                <form action="">
+                                    <input type='text' class="form-control" id='phone5' name='telNo' aligin="left"
+                                        style="background-color: #242424;color: white; border:1px solid #ffb400;"
+                                        required></input>
+                                </form>
+                            </td>
+
+
+                            <td><input type="email" class="form-control" name="eMail" color="white"
+                                    placeholder="Mail Adresiniz"
+                                    style="background-color: #242424;color: white; border:1px solid #ffb400;" required>
+                            </td>
+
+                        </tr>
+                    </div>
+
+                    <hr />
+
+                    <div class="modal-body" align="center">
+
+                        <p class="fw-normal" style="color:#ffb400">Kısaca Firmanızdan ve Faaileyet Alanından Bahsediniz
+                        </p>
+
+                        <textarea class="form-control" name="firma" id="digeristekler" cols="42" rows="2"
+                            maxlength="300" style="background-color: #242424;color: white; border:1px solid #ffb400;"
+                            placeholder=" Firmanız ve faaliyet alanlarınız" required></textarea>
+                    </div>
+
+                    <hr />
+
+                    <div id="radios" class="modal-body">
+
+                        <p class="fw-normal" style="color:#ffb400">Hangi Tür Entegrasyon İstiyorsunuz ?</p>
+
+                        &#160;&#160;
+
+                        <input class="form-check-input" type="radio" name="tur" value="Web Sitesi" id="web"
+                            style="border:2px solid orange; box-shadow:0 0 5px 0px #242424 inset;"
+                            onclick="add(this.id)" checked>
+                        <label class="form-check-label" for="web" style="color:#ffb400">Web Entegrasyon</label>
+
+                        &#160;&#160;&#160;&#160;&#160;&#160;
+
+                        <input class="form-check-input" type="radio" name="tur" value="Veritabanı Entegrasyonu" id="db"
+                            style="border:2px solid orange; box-shadow:0 0 5px 0px #242424 inset;"
+                            onclick="add(this.id)">
+                        <label class="form-check-label" for="db" style="color:#ffb400">Database Entegrasyon</label>
+
+                    </div>
+
+                    <hr />
+
+                    <div class="modal-body" align="center" id="new_chq">
+
+                        <input type="text" class="form-control" name="web_site" color="white"
+                            placeholder="Entegre Olmak İstediğiniz Web Sitesi"
+                            style="background-color: #242424;color: white; border:1px solid #ffb400;" required>
+
+                    </div>
+
+                    <hr />
+
+                    <div class="modal-body" align="center">
+
+                        <p class="fw-normal" style="color:#ffb400">Ayırmayı Düşündüğünüz Bütçe Nedir?</p>
+
+                        <div class="modal-body input-group mb-3" align="center">
+                            <tr>
+
+                                <td><input type="text" class="form-control" name="butce" color="gray"
+                                        placeholder="Bütçeniz(₺)"
+                                        style="background-color: #242424;color: white; border:1px solid #ffb400;"
+                                        required></td>
+
+                            </tr>
+
+                        </div>
+
+                    </div>
+
+                    <hr />
+
+
+                    <div class="modal-body" align="center">
+
+                        <p class="fw-normal" style="color:#ffb400">Kısaca Entegrasyon Projenizden Bahsedin</p>
+
+                        <textarea class="form-control" name="entegreAciklama" id="digeristekler" cols="42" rows="2"
+                            maxlength="300" style="background-color: #242424;color: white; border:1px solid #ffb400;"
+                            placeholder=" Entegrasyon Projenizden Bahsedin" required></textarea>
+                    </div>
+
+                    <div class="modal-body recaptcha0Dark" align="center">
+
+                        {{ recaptcha }}
+
+                    </div>
+
+                    <div class="modal-body recaptcha0Light" align="center">
+
+                        {{ recaptcha }}
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-secondary" onclick="deleteCaptch();">Gönder</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+<form method="POST" action="/send" enctype="multipart/form-data">
+
+    <div class="modal" id="OzelTeklifAl" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="fw-normal" id="modal-title" style="color:#ffb400;" align="center">Özel Yazılım Teklif
+                        Formu</p>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:#ffb400">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body" align="center">
+
+                    <p class="fw-normal" style="color:#ffb400">İletişim Bilgileriniz</p>
+
+                    <div class="modal-body input-group mb-3" align="center">
+                        <tr>
+                            <td><input type="text" class="form-control" name="ad" placeholder="Adınız"
+                                    style="background-color: #242424;color: white; border:1px solid #ffb400;" required>
+                            </td>
+                            <td><input type="text" class="form-control" name="soyad" color="white"
+                                    placeholder="Soyadınız"
+                                    style="background-color: #242424;color: white; border:1px solid #ffb400;" required>
+                            </td>
+                            <input type="hidden" name="modalType" id="modalType" value="OzelTeklifAl">
+                        </tr>
+
+
+                    </div>
+
+                    <div id="content" class="modal-body input-group mb-3" align="center">
+
+                        <tr>
+
+                            <td>
+                                <form action="">
+                                    <input type='text' class="form-control" id='phone2' name='telNo' aligin="left"
+                                        style="background-color: #242424;color: white; border:1px solid #ffb400;"
+                                        required></input>
+                                </form>
+                            </td>
+
+
+                            <td><input type="email" class="form-control" name="eMail" color="white"
+                                    placeholder="Mail Adresiniz"
+                                    style="background-color: #242424;color: white; border:1px solid #ffb400;" required>
+                            </td>
+
+                        </tr>
+                    </div>
+
+                    <hr />
+
+                    <div class="modal-body" align="center">
+
+                        <p class="fw-normal" style="color:#ffb400">Kısaca Firmanızdan ve Faaileyet Alanından Bahsediniz
+                        </p>
+
+                        <textarea class="form-control" name="firma" id="digeristekler" cols="42" rows="2"
+                            maxlength="300" style="background-color: #242424;color: white; border:1px solid #ffb400;"
+                            placeholder=" Firmanız ve faaliyet alanlarınız" required></textarea>
+                    </div>
+
+                    <hr />
+
+                    <div id="radios" class="modal-body">
+
+                        <p class="fw-normal" style="color:#ffb400">Talebinizi Aşağıdakilerden Hangisi Kapsar?</p>
+
+                        <input class="form-check-input" type="radio" name="web" value="Kontrol Paneli" id="Kontrol"
+                            style="border:2px solid orange; box-shadow:0 0 5px 0px #242424 inset;" checked>
+                        <label class="form-check-label" for="Kontrol" style="color:#ffb400">Kontrol Paneli</label>
+
+                        &#160;&#160;&#160;&#160;&#160;&#160;
+
+                        <input class="form-check-input" type="radio" name="web" value="App" id="App"
+                            style="border:2px solid orange; box-shadow:0 0 5px 0px #242424 inset;">
+                        <label class="form-check-label" for="App" style="color:#ffb400">App</label>
+
+                        <br></br>
+
+                        <input class="form-check-input" type="radio" name="web" value="KontrolPaneli&App"
+                            id="KontrolPaneliApp"
+                            style="border:2px solid orange; box-shadow:0 0 5px 0px #242424 inset;">
+                        <label class="form-check-label" for="KontrolPaneliApp" style="color:#ffb400">Kontrol
+                            Paneli&App</label>
+
+
+                    </div>
+
+                    <hr />
+
+                    <div class="modal-body" align="center">
+
+                        <p class="fw-normal" style="color:#ffb400">Ayırmayı Düşündüğünüz Bütçe Nedir?</p>
+
+                        <div class="modal-body input-group mb-3" align="center">
+                            <tr>
+
+                                <td><input type="text" class="form-control" name="butce" color="gray"
+                                        placeholder="Bütçeniz(₺)"
+                                        style="background-color: #242424;color: white; border:1px solid #ffb400;"
+                                        required></td>
+
+                            </tr>
+
+                        </div>
+
+                    </div>
+
+                    <hr />
+
+                    <div class="modal-body" align="center">
+
+                        <p class="fw-normal" style="color:#ffb400">Kısaca Talep Edeceğiniz Sistemin Çalışma Prensibinden
+                            Bahsediniz</p>
+
+                        <textarea class="form-control" name="sistem" id="digeristekler" cols="42" rows="2"
+                            maxlength="300" style="background-color: #242424;color: white; border:1px solid #ffb400;"
+                            placeholder=" Sistemin Çalışma Prensibinden Bahsediniz" required></textarea>
+                    </div>
+
+                    <div class="modal-body recaptcha0Dark" align="center">
+
+                        {{ recaptcha }}
+
+                    </div>
+
+                    <div class="modal-body recaptcha0Light" align="center">
+
+                        {{ recaptcha }}
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-secondary" onclick="deleteCaptch();">Gönder</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+<form method="POST" action="/send" enctype="multipart/form-data">
+
+    <div class="modal" id="SosyalTeklifAl" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="fw-normal" id="modal-title" style="color:#ffb400;" align="center">Sosyal Medya Teklif
+                        Formu</p>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:#ffb400">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body" align="center">
+
+                    <p class="fw-normal" style="color:#ffb400">İletişim Bilgileriniz</p>
+
+                    <div class="modal-body input-group mb-3" align="center">
+                        <tr>
+                            <td><input type="text" class="form-control" name="ad" placeholder="Adınız"
+                                    style="background-color: #242424;color: white; border:1px solid #ffb400;" required>
+                            </td>
+                            <td><input type="text" class="form-control" name="soyad" color="white"
+                                    placeholder="Soyadınız"
+                                    style="background-color: #242424;color: white; border:1px solid #ffb400;" required>
+                            </td>
+                            <input type="hidden" name="modalType" id="modalType" value="SosyalTeklifAl">
+                        </tr>
+
+
+                    </div>
+
+                    <div id="content" class="modal-body input-group mb-3" align="center">
+
+                        <tr>
+
+                            <td>
+                                <form action="">
+                                    <input type='text' class="form-control" id='phone3' name='telNo' aligin="left"
+                                        style="background-color: #242424;color: white; border:1px solid #ffb400;"
+                                        required></input>
+                                </form>
+                            </td>
+
+
+                            <td><input type="email" class="form-control" name="eMail" color="white"
+                                    placeholder="Mail Adresiniz"
+                                    style="background-color: #242424;color: white; border:1px solid #ffb400;" required>
+                            </td>
+
+                        </tr>
+                    </div>
+
+                    <hr />
+
+                    <div class="modal-body" align="center">
+
+                        <p class="fw-normal" style="color:#ffb400">Kısaca Firmanızdan ve Faaileyet Alanından Bahsediniz
+                        </p>
+
+                        <textarea class="form-control" name="firma" id="digeristekler" cols="42" rows="2"
+                            maxlength="300" style="background-color: #242424;color: white; border:1px solid #ffb400;"
+                            placeholder=" Firmanız ve faaliyet alanlarınız" required></textarea>
+                    </div>
+
+                    <hr />
+
+                    <div id="checkbox" class="modal-body">
+
+                        <p class="fw-normal" style="color:#ffb400">Hangi Sosyal Mecraalar İçin Tasarım Talep Ediyorsunuz
+                        </p>
+
+                        <input class="form-check-inputcheck" type="checkbox" name="web" value="Facebook" id="Facebook"
+                            style="border:2px solid orange; box-shadow:0 0 5px 0px #242424 inset;" checked>
+                        <label class="form-check-label" for="Facebook" style="color:#ffb400">Facebook</label>
+
+                        &#160;&#160;&#160;&#160;&#160;&#160;
+
+                        <input class="form-check-inputcheck" type="checkbox" name="web" value="Instagram" id="Instagram"
+                            style="border:2px solid orange; box-shadow:0 0 5px 0px #242424 inset;">
+                        <label class="form-check-label" for="Instagram" style="color:#ffb400">İnstagram</label>
+
+                        <br></br>
+
+                        <input class="form-check-inputcheck" type="checkbox" name="web" value="Twitter" id="Twitter"
+                            style="border:2px solid orange; box-shadow:0 0 5px 0px #242424 inset;">
+                        <label class="form-check-label" for="Twitter" style="color:#ffb400">Twitter</label>
+
+                        &#160;&#160;&#160;&#160;&#160;&#160;
+
+                        <input class="form-check-inputcheck" type="checkbox" name="web" value="LinkedIn" id="LinkedIn"
+                            style="border:2px solid orange; box-shadow:0 0 5px 0px #242424 inset;">
+                        <label class="form-check-label" for="LinkedIn" style="color:#ffb400">LinkedIn</label>
+
+                    </div>
+
+                    <hr />
+
+                    <div id="checkbox0" class="modal-body">
+
+                        <p class="fw-normal" style="color:#ffb400">Ne Tür Tasarımlar Talep Ediyorsunuz</p>
+
+                        <input class="form-check-inputcheck" type="checkbox" name="tasarim" value="Gönderi" id="Gönderi"
+                            style="border:2px solid orange; box-shadow:0 0 5px 0px #242424 inset;" checked>
+                        <label class="form-check-label" for="Gönderi" style="color:#ffb400">Gönderi</label>
+
+                        &#160;&#160;&#160;&#160;&#160;&#160;
+
+                        <input class="form-check-inputcheck" type="checkbox" name="tasarim" value="Hikaye" id="Hikaye"
+                            style="border:2px solid orange; box-shadow:0 0 5px 0px #242424 inset;">
+                        <label class="form-check-label" for="Hikaye" style="color:#ffb400">Hikaye(Story)</label>
+
+                        <br></br>
+
+                        <input class="form-check-inputcheck" type="checkbox" name="tasarim" value="Banner" id="Banner"
+                            style="border:2px solid orange; box-shadow:0 0 5px 0px #242424 inset;">
+                        <label class="form-check-label" for="Banner" style="color:#ffb400">Banner</label>
+
+                    </div>
+
+                    <hr />
+
+                    <div class="modal-body" align="center">
+
+                        <p class="fw-normal" style="color:#ffb400">Ayırmayı Düşündüğünüz Bütçe Nedir?</p>
+
+                        <div class="modal-body input-group mb-3" align="center">
+                            <tr>
+
+                                <td><input type="text" class="form-control" name="butce" color="gray"
+                                        placeholder="Bütçeniz(₺)"
+                                        style="background-color: #242424;color: white; border:1px solid #ffb400;"
+                                        required></td>
+
+                            </tr>
+
+                        </div>
+
+                    </div>
+
+                    <hr />
+
+                    <div class="modal-body" align="center">
+
+                        <p class="fw-normal" style="color:#ffb400">Kısaca Talep Ettiğiniz İçeriklerden Bahsediniz</p>
+
+                        <textarea class="form-control" name="sistem" id="digeristekler" cols="42" rows="2"
+                            maxlength="300" style="background-color: #242424;color: white; border:1px solid #ffb400;"
+                            placeholder=" İçerik Detayı" required></textarea>
+                    </div>
+
+                    <div class="modal-body recaptcha0Dark" align="center">
+
+                        {{ recaptcha }}
+
+                    </div>
+
+                    <div class="modal-body recaptcha0Light" align="center">
+
+                        {{ recaptcha }}
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-secondary" onclick="deleteCaptch();">Gönder</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+<form method="POST" action="/send" enctype="multipart/form-data">
+
+    <div class="modal" id="VideoAnimasyonTeklifAl" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="fw-normal" id="modal-title" style="color:#ffb400;" align="center">Video&Animasyon Teklif
+                        Formu</p>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:#ffb400">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body" align="center">
+
+                    <p class="fw-normal" style="color:#ffb400">İletişim Bilgileriniz</p>
+
+                    <div class="modal-body input-group mb-3" align="center">
+                        <tr>
+                            <td><input type="text" class="form-control" name="ad" placeholder="Adınız"
+                                    style="background-color: #242424;color: white; border:1px solid #ffb400;" required>
+                            </td>
+                            <td><input type="text" class="form-control" name="soyad" color="white"
+                                    placeholder="Soyadınız"
+                                    style="background-color: #242424;color: white; border:1px solid #ffb400;" required>
+                            </td>
+                            <input type="hidden" name="modalType" id="modalType" value="VideoAnimasyonTeklifAl">
+                        </tr>
+
+
+                    </div>
+
+                    <div id="content" class="modal-body input-group mb-3" align="center">
+
+                        <tr>
+
+                            <td>
+                                <form action="">
+                                    <input type='text' class="form-control" id='phone4' name='telNo' aligin="left"
+                                        style="background-color: #242424;color: white; border:1px solid #ffb400;"
+                                        required></input>
+                                </form>
+                            </td>
+
+
+                            <td><input type="email" class="form-control" name="eMail" color="white"
+                                    placeholder="Mail Adresiniz"
+                                    style="background-color: #242424;color: white; border:1px solid #ffb400;" required>
+                            </td>
+
+                        </tr>
+                    </div>
+
+                    <hr />
+
+                    <div class="modal-body" align="center">
+
+                        <p class="fw-normal" style="color:#ffb400">Kısaca Firmanızdan ve Faaileyet Alanından Bahsediniz
+                        </p>
+
+                        <textarea class="form-control" name="firma" id="digeristekler" cols="42" rows="2"
+                            maxlength="300" style="background-color: #242424;color: white; border:1px solid #ffb400;"
+                            placeholder=" Firmanız ve faaliyet alanlarınız" required></textarea>
+                    </div>
+
+                    <hr />
+
+                    <div id="checkbox0" class="modal-body">
+
+                        <p class="fw-normal" style="color:#ffb400">Ne Tür Video&Animasyonlar Talep Ediyorsunuz</p>
+
+                        <input class="form-check-inputcheck" type="checkbox" name="tasarim" value="Gönderi"
+                            id="Gönderi0" style="border:2px solid orange; box-shadow:0 0 5px 0px #242424 inset;"
+                            checked>
+                        <label class="form-check-label" for="Gönderi0" style="color:#ffb400">Gönderi</label>
+
+                        &#160;&#160;&#160;&#160;&#160;&#160;
+
+                        <input class="form-check-inputcheck" type="checkbox" name="tasarim" value="Hikaye" id="Hikaye0"
+                            style="border:2px solid orange; box-shadow:0 0 5px 0px #242424 inset;">
+                        <label class="form-check-label" for="Hikaye0" style="color:#ffb400">Hikaye(Story)</label>
+
+                        <br></br>
+
+                        <input class="form-check-inputcheck" type="checkbox" name="tasarim" value="Banner" id="Banner0"
+                            style="border:2px solid orange; box-shadow:0 0 5px 0px #242424 inset;">
+                        <label class="form-check-label" for="Banner0" style="color:#ffb400">Banner</label>
+
+                    </div>
+
+                    <hr />
+
+                    <div class="modal-body" align="center">
+
+                        <p class="fw-normal" style="color:#ffb400">Ayırmayı Düşündüğünüz Bütçe Nedir?</p>
+
+                        <div class="modal-body input-group mb-3" align="center">
+                            <tr>
+
+                                <td><input type="text" class="form-control" name="butce" color="gray"
+                                        placeholder="Bütçeniz(₺)"
+                                        style="background-color: #242424;color: white; border:1px solid #ffb400;"
+                                        required></td>
+
+                            </tr>
+
+                        </div>
+
+                    </div>
+
+                    <hr />
+
+                    <div class="modal-body" align="center">
+
+                        <p class="fw-normal" style="color:#ffb400">Kısaca Talep Ettiğiniz Video&Animasyon İçeriğinden
+                            Bahsediniz</p>
+
+                        <textarea class="form-control" name="sistem" id="digeristekler" cols="42" rows="2"
+                            maxlength="300" style="background-color: #242424;color: white; border:1px solid #ffb400;"
+                            placeholder=" Video&Animasyon Detayı" required></textarea>
+                    </div>
+
+                    <div class="modal-body recaptcha0Dark" align="center">
+
+                        {{ recaptcha }}
+
+                    </div>
+
+                    <div class="modal-body recaptcha0Light" align="center">
+
+                        {{ recaptcha }}
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-secondary" onclick="deleteCaptch();">Gönder</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+
+<script>
+
+    function deleteCaptch() {
+
+        var isDark = document.getElementById("isDark").value;
+
+        if (isDark == "white") {
+
+            var elements = document.getElementsByClassName("recaptcha0Dark");
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].children[1].remove();
+            }
+
+        }
+
+        else{
+
+            var elements = document.getElementsByClassName("recaptcha0Light");
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].children[1].remove();
+            }
+
+        }
+
+    }
+
+
+
+    function add(id) {
+
+        var color = document.getElementById("phone1").style.color;
+        var border = document.getElementById("phone1").style.border;
+        var isDark = document.getElementById("isDark").value;
+
+        var colorText = document.getElementById("modal-title").style.color;
+
+        const radioColor = document.getElementById("Gönderi0").style.border;
+
+        if (id == "web") {
+
+            if (isDark == "dark") {
+                var new_input = "<input type='text' class='form-control' name='web_site' color='" + color + "' placeholder='Entegre Olmak İstediğiniz Web Sitesi?' style='background-color: #242424;color: white; border:" + border + "' required>";
+            }
+
+            else {
+                var new_input = "<input type='text' class='form-control' name='web_site' color='" + color + "' placeholder='Entegre Olmak İstediğiniz Web Sitesi?' style='background-color: white;color: black; border:" + border + "' required>";
+            }
+        }
+
+        else {
+
+            if (isDark == "dark") {
+
+                var new_input = `
+
+            <p class="fw-normal" style="color:`+ colorText + `">Entegre Olmak İstediğiniz Veritabanı ?</p>
+
+            &#160;&#160;&#160;&#160;
+
+            <input class="form-check-input" type="radio" name="Veritabani" value="Microsoft SQL Server" id="mssql"
+            style="border:2px solid orange; box-shadow:0 0 5px 0px #242424 inset;" checked>
+            <label class="form-check-label" for="mssql" style="color:`+ colorText + `">Microsoft SQL Server <big><big><big><i class="icon-mssql form-check-label" style="color:` + colorText + `"></i></big></big></big></label>
+            
+            <br></br>
+            &#160;&#160;&#160;&#160;
+            
+            <input class="form-check-input" type="radio" name="Veritabani" value="PostgreSQL" id="PostgreSQL" 
+            style="border:2px solid orange; box-shadow:0 0 5px 0px #242424 inset;">
+            <label class="form-check-label" for="PostgreSQL" style="color:`+ colorText + `">PostgreSQL <big><big><big><i class="icon-postgres-alt form-check-label" style="color:` + colorText + `"></i></big></big></big></label>
+            
+            <br></br>
+            &#160;&#160;&#160;&#160;
+
+            <input class="form-check-input" type="radio" name="Veritabani" value="MySQL" id="MySQL" 
+            style="border:2px solid orange; box-shadow:0 0 5px 0px #242424 inset;">
+            <label class="form-check-label" for="MySQL" style="color:`+ colorText + `">MySQL <big><big><big><i class="icon-mysql form-check-label" style="color:` + colorText + `"></i></big></big></big></label>
+                                        
+            `;
+
+            }
+
+            else {
+
+                var new_input = `
+
+            <p class="fw-normal" style="color:`+ colorText + `">Entegre Olmak İstediğiniz Veritabanı ?</p>
+
+            &#160;&#160;&#160;&#160;
+
+            <input class="form-check-input" type="radio" name="Veritabani" value="Microsoft SQL Server" id="mssql"
+            style="border:2px solid orange; box-shadow:0 0 5px 0px white inset;" checked>
+            <label class="form-check-label" for="mssql" style="color:`+ colorText + `">Microsoft SQL Server <big><big><big><i class="icon-mssql form-check-label" style="color:` + colorText + `"></i></big></big></big></label>
+            
+            <br></br>
+            &#160;&#160;&#160;&#160;
+            
+            <input class="form-check-input" type="radio" name="Veritabani" value="PostgreSQL" id="PostgreSQL" 
+            style="border:2px solid orange; box-shadow:0 0 5px 0px white inset;">
+            <label class="form-check-label" for="PostgreSQL" style="color:`+ colorText + `">PostgreSQL <big><big><big><i class="icon-postgres-alt form-check-label" style="color:` + colorText + `"></i></big></big></big></label>
+            
+            <br></br>
+            &#160;&#160;&#160;&#160;
+
+            <input class="form-check-input" type="radio" name="Veritabani" value="MySQL" id="MySQL" 
+            style="border:2px solid orange; box-shadow:0 0 5px 0px white inset;">
+            <label class="form-check-label" for="MySQL" style="color:`+ colorText + `">MySQL <big><big><big><i class="icon-mysql form-check-label" style="color:` + colorText + `"></i></big></big></big></label>
+                                        
+            `;
+
+
+
+            }
+
+
+        }
+
+        $('#new_chq').html(new_input);
+
+        if (isDark == "dark") {
+
+            var formCheckInputs = document.getElementsByClassName('form-check-input')
+            var formCheckInputDivs = Array.prototype.filter.call(formCheckInputs, function (formCheckInput) {
+
+                formCheckInput.style.cssText += "box-shadow:0 0 5px 0px #242424 inset;";
+            });
+
+            var formCheckInputs = document.getElementsByClassName('form-check-input')
+            var formCheckInputDivs = Array.prototype.filter.call(formCheckInputs, function (formCheckInput) {
+                formCheckInput.style = "border:" + radioColor + "; box-shadow:0 0 5px 0px #242424 inset;";
+            });
+
+
+        }
+
+        else {
+
+            var formCheckInputs = document.getElementsByClassName('form-check-input')
+            var formCheckInputDivs = Array.prototype.filter.call(formCheckInputs, function (formCheckInput) {
+
+                formCheckInput.style.cssText += "box-shadow:0 0 5px 0px white inset;";
+            });
+
+            var formCheckInputs = document.getElementsByClassName('form-check-input')
+            var formCheckInputDivs = Array.prototype.filter.call(formCheckInputs, function (formCheckInput) {
+                formCheckInput.style = "border:" + radioColor + "; box-shadow:0 0 5px 0px white inset;"
+
+            });
+        }
+
+        var colorName = document.getElementById("colorName").value;
+        $('.form-check-input').attr('data-modal-color', colorName);
+
+    }
+
+</script>

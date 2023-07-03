@@ -1,0 +1,225 @@
+﻿.iti.iti--allow-dropdown { width: 50% }
+
+.modal[data-modal-color] {
+  color: #fff;
+}
+
+.modal .modal-header {
+  padding: 23px 26px;
+  border-bottom: 1px solid transparent;
+}
+
+.modal .modal-content {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.31);
+  border-radius: 3px;
+  border: 0;
+}
+
+.modal-footer {
+  padding: 15px;
+  text-align: right;
+  border-top: 1px solid transparent;
+}
+
+.modal[data-modal-color] .modal-footer {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.modal[data-modal-color] .modal-footer .btn-link {
+  font-weight: 400;
+}
+
+.modal[data-modal-color] .modal-title, .modal[data-modal-color] .modal-footer .btn-link {
+  color: #fff;
+}
+
+.modal .modal-footer .btn-link {
+  font-size: 14px;
+  color: #000;
+  font-weight: 500;
+}
+
+.btn-link {
+  color: #797979;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+.modal[data-modal-color] .modal-footer .btn-link:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  text-decoration:none;
+}
+
+.modal[data-modal-color] .modal-footer .btn-link {
+  font-weight: 400;
+}
+
+
+.modal[data-modal-color="light"] .modal-content {
+  background: #fff;
+}
+
+.modal[data-modal-color="dark"] .modal-content {
+  background: #242424;
+  
+}
+
+.form-check-input {
+  -webkit-appearance:none;
+  width:12px;
+  height:12px;
+  border:2px solid orange;
+  border-radius:50%;
+  outline:none;
+  box-shadow:0 0 5px 0px #242424 inset;
+}
+
+.form-check-input:hover {
+  box-shadow:0 0 5px 0px orange inset;
+}
+
+.form-check-input:before {
+  content:'';
+  display:block;
+  width:100%;
+  height:100%;
+   
+  border-radius:100%;    
+}
+
+.form-check-input:checked:before {
+  background:orange;
+
+}
+
+.form-check-input[data-modal-color="red"]:checked:before {
+  background: red;
+  
+}
+
+.form-check-input[data-modal-color="blue"]:checked:before {
+  background: #4169e1;
+  
+}
+
+.form-check-input[data-modal-color="blueviolet"]:checked:before {
+  background: #8a2be2;
+  
+}
+
+.form-check-input[data-modal-color="goldenrod"]:checked:before {
+  background: #daa520;
+  
+}
+
+.form-check-input[data-modal-color="green"]:checked:before {
+  background: #72b626;
+  
+}
+
+.form-check-input[data-modal-color="magenta"]:checked:before {
+  background: #ff00ff;
+  
+}
+
+.form-check-input[data-modal-color="orange"]:checked:before {
+  background: #fa5b0f;
+  
+}
+
+.form-check-input[data-modal-color="purple"]:checked:before {
+  background: #6957af;
+  
+}
+
+.form-check-input[data-modal-color="yellow"]:checked:before {
+  background: #ffb400;
+  
+}
+
+.form-check-input[data-modal-color="yellowgreen"]:checked:before {
+  background: #9acd32;
+  
+}
+
+
+
+
+
+.form-check-inputcheck {
+  -webkit-appearance:none;
+  width:12px;
+  height:12px;
+  border:2px solid orange;
+  border-radius:0%;
+  outline:none;
+  box-shadow:0 0 5px 0px #242424 inset;
+}
+
+.form-check-inputcheck:hover {
+  box-shadow:0 0 5px 0px orange inset;
+}
+
+.form-check-inputcheck:before {
+  content:'';
+  display:block;
+  width:100%;
+  height:100%;
+   
+  border-radius:0%;    
+}
+
+.form-check-inputcheck:checked:before {
+  background:orange;
+
+}
+
+.form-check-inputcheck[data-modal-color="red"]:checked:before {
+  background: red;
+  
+}
+
+.form-check-inputcheck[data-modal-color="blue"]:checked:before {
+  background: #4169e1;
+  
+}
+
+.form-check-inputcheck[data-modal-color="blueviolet"]:checked:before {
+  background: #8a2be2;
+  
+}
+
+.form-check-inputcheck[data-modal-color="goldenrod"]:checked:before {
+  background: #daa520;
+  
+}
+
+.form-check-inputcheck[data-modal-color="green"]:checked:before {
+  background: #72b626;
+  
+}
+
+.form-check-inputcheck[data-modal-color="magenta"]:checked:before {
+  background: #ff00ff;
+  
+}
+
+.form-check-inputcheck[data-modal-color="orange"]:checked:before {
+  background: #fa5b0f;
+  
+}
+
+.form-check-inputcheck[data-modal-color="purple"]:checked:before {
+  background: #6957af;
+  
+}
+
+.form-check-inputcheck[data-modal-color="yellow"]:checked:before {
+  background: #ffb400;
+  
+}
+
+.form-check-inputcheck[data-modal-color="yellowgreen"]:checked:before {
+  background: #9acd32;
+  
+}

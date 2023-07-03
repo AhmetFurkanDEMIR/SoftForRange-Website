@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from slimhamdi.net/salimo/demos/blog-post.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 May 2022 09:28:34 GMT -->
+
+<head>
+    <meta charset="utf-8" />
+    <title>Teslim Edilen Proje-Bi Koşu Gelsin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="Range of software innovations">
+    <meta name="keywords" content="SoftForRange, SFR, software, yazılım, site, websitesi, konya, ankara,
+    istanbul, türkiye, konya yazılım, yazılım ajansı, python, java, 
+    oracle, ahmet furkan demir, ahmet furkan, mustafa esen, demirai, 
+    necmettin erbakan üniversitesi, selçuk üniversitesi, konya teknik üniversitesi,
+    bilgisayar mühendisliği, mühendislik, yazılım hizmeti, özel yazılım,
+    kurumsal websitesi, kişisel websitesi, yazılım çözümleri, ücretsiz yazılım, program,
+    entegrasyon çözümleri, veritabanları, sql server, mysql, postgresql, web sitesi, konya ajans, konya program, 
+    mobil uygulama, neü, mobil program, flutter, kotlin, android uygulama, ios uygulama,
+    android, ios, apple, play store, app store, reklam ajansı, sosyal medya, sosyal medya içerik, 
+    içerik düzenleme, video tasarımı, animasyon tasarımı, instagram gönderi, instagram post, 
+    facebook tasarım, linkedin tasarım, animasyon video, video düzenleme, reklam tasarımı, reklam oluşturma, grafik tasarımı, 
+    web tasarımı, wordpress, wp, wordpress site tasarımı, hazır site, kod yazmadan websitesi, kodsuz site, basit site,
+    konya yazılım, ankara yazılım, bursa yazılım, bi koşu gelsin, yazılım ortağı, programlama dilleri, 
+    internet siteleri, websiteleri, hazır site oluştur, hazır site oluşturma, yazılım mühendisliği, 
+    hazır web sitesi oluşturma, program yazma, satılık program, HTML, CSS, JavaScript">
+    <meta name="author" content="SoftForRange">
+
+    
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+            margin: 0
+        }
+
+       
+
+        img {
+            vertical-align: middle;
+            max-width: 1000px;
+            max-height: 400px;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .mySlides {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+
+            .prev,
+            .next,
+            .text {
+                font-size: 11px
+            }
+        }
+    </style>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../static/img/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Template CSS Files -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../static/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/magnific-popup.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/skins/yellow.css" />
+
+    <!-- Live Style Switcher - demo only -->
+    <link rel="alternate stylesheet" type="text/css" title="blue" href="../static/css/skins/blue.css" />
+    <link rel="alternate stylesheet" type="text/css" title="blueviolet" href="../static/css/skins/blueviolet.css" />
+    <link rel="alternate stylesheet" type="text/css" title="goldenrod" href="../static/css/skins/goldenrod.css" />
+    <link rel="alternate stylesheet" type="text/css" title="green" href="../static/css/skins/green.css" />
+    <link rel="alternate stylesheet" type="text/css" title="magenta" href="../static/css/skins/magenta.css" />
+    <link rel="alternate stylesheet" type="text/css" title="orange" href="../static/css/skins/orange.css" />
+    <link rel="alternate stylesheet" type="text/css" title="purple" href="../static/css/skins/purple.css" />
+    <link rel="alternate stylesheet" type="text/css" title="red" href="../static/css/skins/red.css" />
+    <link rel="alternate stylesheet" type="text/css" title="yellow" href="../static/css/skins/yellow.css" />
+    <link rel="alternate stylesheet" type="text/css" title="yellowgreen" href="../static/css/skins/yellowgreen.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/styleswitcher.css" />
+
+    <!-- Template JS Files -->
+    <script type="text/javascript" src="../static/js/modernizr.js"></script>
+
+</head>
+
+<body class="double-diagonal dark blog-page blog-post">
+    <!-- Preloader Starts -->
+    <div class="preloader" id="preloader">
+        <div class="logopreloader">
+        </div>
+        <div class="loader" id="loader"></div>
+        <input type="hidden" name="isDark" id="isDark" value="dark">
+    </div>
+    <!-- Preloader Ends -->
+    <!-- Live Style Switcher Starts - demo only -->
+    <div id="switcher" class="">
+        <div class="content-switcher">
+            <h4>RENKLER</h4>
+            <ul>
+                <li>
+                    <a href="/"
+                        onclick="setActiveStyleSheet('blue'); document.getElementById('logo-light').src='../static/img/styleswitcher/logos/blue.png'; document.getElementById('logo-dark').src='../static/img/styleswitcher/logos/logos-dark/blue.png';"
+                        title="blue" class="color"><img src="../static/img/styleswitcher/blue.png" alt="" width="15"
+                            height="15" /></a>
+                </li>
+                <li>
+                    <a href="/"
+                        onclick="setActiveStyleSheet('blueviolet'); document.getElementById('logo-light').src='../static/img/styleswitcher/logos/blueviolet.png'; document.getElementById('logo-dark').src='../static/img/styleswitcher/logos/logos-dark/blueviolet.png';"
+                        title="blueviolet" class="color"><img src="../static/img/styleswitcher/blueviolet.png" alt=""
+                            width="15" height="15" /></a>
+                </li>
+                <li>
+                    <a href="/"
+                        onclick="setActiveStyleSheet('goldenrod'); document.getElementById('logo-light').src='../static/img/styleswitcher/logos/goldenrod.png'; document.getElementById('logo-dark').src='../static/img/styleswitcher/logos/logos-dark/goldenrod.png';"
+                        title="goldenrod" class="color"><img src="../static/img/styleswitcher/goldenrod.png" alt=""
+                            width="15" height="15" /></a>
+                </li>
+                <li>
+                    <a href="/"
+                        onclick="setActiveStyleSheet('green'); document.getElementById('logo-light').src='../static/img/styleswitcher/logos/green.png'; document.getElementById('logo-dark').src='../static/img/styleswitcher/logos/logos-dark/green.png';"
+                        title="green" class="color"><img src="../static/img/styleswitcher/green.png" alt="" width="15"
+                            height="15" /></a>
+                </li>
+                <li>
+                    <a href="/"
+                        onclick="setActiveStyleSheet('magenta'); document.getElementById('logo-light').src='../static/img/styleswitcher/logos/magenta.png'; document.getElementById('logo-dark').src='../static/img/styleswitcher/logos/logos-dark/magenta.png';"
+                        title="magenta" class="color"><img src="../static/img/styleswitcher/magenta.png" alt=""
+                            width="15" height="15" /></a>
+                </li>
+                <li>
+                    <a href="/"
+                        onclick="setActiveStyleSheet('orange'); document.getElementById('logo-light').src='../static/img/styleswitcher/logos/orange.png'; document.getElementById('logo-dark').src='../static/img/styleswitcher/logos/logos-dark/orange.png';"
+                        title="orange" class="color"><img src="../static/img/styleswitcher/orange.png" alt="" width="15"
+                            height="15" /></a>
+                </li>
+                <li>
+                    <a href="/"
+                        onclick="setActiveStyleSheet('purple'); document.getElementById('logo-light').src='../static/img/styleswitcher/logos/purple.png'; document.getElementById('logo-dark').src='../static/img/styleswitcher/logos/logos-dark/purple.png';"
+                        title="purple" class="color"><img src="../static/img/styleswitcher/purple.png" alt="" width="15"
+                            height="15" /></a>
+                </li>
+                <li>
+                    <a href="/"
+                        onclick="setActiveStyleSheet('red'); document.getElementById('logo-light').src='../static/img/styleswitcher/logos/red.png'; document.getElementById('logo-dark').src='../static/img/styleswitcher/logos/logos-dark/red.png';"
+                        title="red" class="color"><img src="../static/img/styleswitcher/red.png" alt="" width="15"
+                            height="15" /></a>
+                </li>
+                <li>
+                    <a href="/"
+                        onclick="setActiveStyleSheet('yellow'); document.getElementById('logo-light').src='../static/img/styleswitcher/logos/yellow.png'; document.getElementById('logo-dark').src='../static/img/styleswitcher/logos/logos-dark/yellow.png';"
+                        title="yellow" class="color"><img src="../static/img/styleswitcher/yellow.png" alt="" width="15"
+                            height="15" /></a>
+                </li>
+                <li>
+                    <a href="/"
+                        onclick="setActiveStyleSheet('yellowgreen'); document.getElementById('logo-light').src='../static/img/styleswitcher/logos/yellowgreen.png'; document.getElementById('logo-dark').src='../static/img/styleswitcher/logos/logos-dark/yellowgreen.png';"
+                        title="yellowgreen" class="color"><img src="../static/img/styleswitcher/yellowgreen.png" alt=""
+                            width="15" height="15" /></a>
+                </li>
+            </ul>
+
+
+
+            <h4>TEMALAR</h4>
+
+            <label><input class="dark_switch" type="radio" name="color_style" id="is_light" value="light" /> Aydınlık
+                Tema</label>
+            <label><input class="dark_switch" type="radio" name="color_style" id="is_dark" value="dark"
+                    checked="checked" /> Koyu Tema</label>
+
+
+
+            <!--p>LAYOUT STYLE</p>
+            <label><input class="boxed_switch" type="radio" name="layout_style" id="is_wide" value="wide" checked="checked" /> Wide</label>
+            <label><input class="boxed_switch" type="radio" name="layout_style" id="is_boxed" value="boxed" /> Boxed</label>
+
+            <hr /-->
+
+            <h4>AYIRICILAR</h4>
+            <span class="info">Değişiklikleri görmek için seçin ve kaydırın</span>
+            <label><input class="separator_switch" type="radio" name="separator_style" id="is_normal" value="normal" />
+                <img alt="separator" width="20" height="20"
+                    src="../static/img/styleswitcher/separators/1.jpg" /></label>
+            <label><input class="separator_switch" type="radio" name="separator_style" id="is_skew" value="skew" /> <img
+                    alt="separator" width="20" height="20" src="../static/img/styleswitcher/separators/2.jpg" /></label>
+            <label><input class="separator_switch" type="radio" name="separator_style" id="is_reversed_skew"
+                    value="reversed-skew" /> <img alt="separator" width="20" height="20"
+                    src="../static/img/styleswitcher/separators/3.jpg" /></label>
+            <label><input class="separator_switch" type="radio" name="separator_style" id="is_double_diagonal"
+                    value="double-diagonal" checked="checked" /> <img alt="separator" width="20" height="20"
+                    src="../static/img/styleswitcher/separators/4.jpg" /></label>
+            <label><input class="separator_switch" type="radio" name="separator_style" id="is_big_triangle"
+                    value="big-triangle" /> <img alt="separator" width="20" height="20"
+                    src="../static/img/styleswitcher/separators/5.jpg" /></label>
+
+            <div id="hideSwitcher">&times;</div>
+        </div>
+    </div>
+    <div id="showSwitcher" class="styleSecondColor"><i class="fa fa-cog fa-spin"></i></div>
+    <!-- Live Style Switcher Ends - demo only -->
+    <!-- Page Wrapper Starts -->
+    <div class="wrapper">
+        <!-- Header Starts -->
+        <header id="header" class="header">
+            <div class="header-inner">
+                <!-- Navbar Starts -->
+                <nav class="navbar navbar-expand-lg p-0" id="singlepage-nav">
+                    <!-- Logo Starts -->
+                    <div class="logo">
+                        <a class="navbar-brand link-menu nav-external" href="/">
+                            <!-- Logo White Starts -->
+                            <img id="logo-light" class="logo-light" src="../static/img/styleswitcher/logos/yellow.png"
+                                alt="logo-light" />
+                            <!-- Logo White Ends -->
+                            <!-- Logo Black Starts -->
+                            <img id="logo-dark" class="logo-dark"
+                                src="../static/img/styleswitcher/logos/logos-dark/yellow.png" alt="logo-dark" />
+                            <!-- Logo Black Ends -->
+                        </a>
+                    </div>
+                    <!-- Logo Ends -->
+                    <!-- Hamburger Icon Starts -->
+                    <button class="navbar-toggler p-0" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span id="icon-toggler">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </button>
+                    <!-- Hamburger Icon Ends -->
+                    <!-- Navigation Menu Starts -->
+                    <div class="collapse navbar-collapse nav-menu" id="navbarSupportedContent">
+                        <ul class="nav-menu-inner ml-auto">
+
+                            <li><a class="link-menu nav-external" href="/"><i class="fa fa-home"></i> Ana Sayfaya
+                                    Dön</a></li>
+                        </ul>
+                    </div>
+                    <!-- Navigation Menu Ends -->
+                </nav>
+                <!-- Navbar Ends -->
+            </div>
+        </header>
+        <!-- Banner Starts -->
+        <section class="banner banner-blog-post">
+            <div class="content text-center">
+                <div class="text-center top-text">
+                    <!-- Main Heading Starts -->
+                    <div class="text-center top-text">
+                        <h1>Bİ KOŞU GELSİN WEB SİTESİ</h1>
+                    </div>
+                    <!-- Main Heading Ends -->
+                    <hr>
+                    <!-- Meta Starts -->
+                    <div class="meta">
+
+                        <span> <i class="fw-normal fa fa-calendar" style="color:#ffb400"></i>
+                            <font color="#ffb400" class="fw-normal">Teslim Tarihi: </font> 5 Mayıs 2022
+                        </span>
+                        <span><i class="fw-normal fa-solid fa-diagram-project" style="color:#ffb400"></i>
+                            <font color="#ffb400" class="fw-normal">Proje Türü: </font> Kurumsal Web Sitesi
+                        </span>
+                        <span><i class="fw-normal fa-solid fa-building" style="color:#ffb400"></i> </i>
+                            <font color="#ffb400" class="fw-normal">Site Türü: </font> Wordpress
+                        </span>
+                        <span><i class="fw-normal fa-solid fa-link" style="color:#ffb400"></i> </i>
+                            <font color="#ffb400" class="fw-normal">Ziyaret Et: </font> <a
+                                href="https://bikosugelsin.com/" target="_blank" style="color:#ccc">Bi Koşu Gelsin</a>
+                        </span>
+
+                    </div>
+                    <!-- Meta Ends -->
+                </div>
+            </div>
+        </section>
+        <!-- Banner Ends -->
+        <!-- Section Content Starts -->
+        <section class="blog">
+            <div class="container">
+                <div class="row">
+                    <div class="content col-xs-12 col-md-8">
+                        <!-- Article Starts -->
+                        <article>
+                            <!-- Figure Starts -->
+                            <figure>
+                                <div class="slideshow-container">
+
+                                    <div class="mySlides ">
+                                       
+                                        <img src="../static/img/blog/Bkgss1.jpg" style="width:100%">
+                                        
+                                    </div>
+
+                                    <div class="mySlides ">
+                                        
+                                        <img src="../static/img/blog/Bkgss2.jpg" style="width:100%">
+                                        
+                                    </div>
+
+                                    <div class="mySlides ">
+                                        
+                                        <img src="../static/img/blog/Bkgss3.jpg" style="width:100%">
+                                        
+                                    </div>
+
+                                    <a class="fw-normal prev" style="color:#ffb400" onclick="plusSlides(-1)">❮</a>
+                                    <a class="fw-normal  next" style="color:#ffb400" onclick="plusSlides(1)">❯</a>
+
+                                </div>
+                                <br>
+
+                                <div class="fw-normal" style="text-align:center">
+                                    <span class="fw-normal dot" style="color:#ffb400" onclick="currentSlide(1)"></span>
+                                    <span class="fw-normal dot" style="color:#ffb400" onclick="currentSlide(2)"></span>
+                                    <span class="fw-normal dot" style="color:#ffb400" onclick="currentSlide(3)"></span>
+                                </div>
+
+                                <script>
+                                    let slideIndex = 1;
+                                    showSlides(slideIndex);
+
+                                    function plusSlides(n) {
+                                        showSlides(slideIndex += n);
+                                    }
+
+                                    function currentSlide(n) {
+                                        showSlides(slideIndex = n);
+                                    }
+
+                                    function showSlides(n) {
+                                        let i;
+                                        let slides = document.getElementsByClassName("mySlides");
+                                        let dots = document.getElementsByClassName("dot");
+                                        if (n > slides.length) { slideIndex = 1 }
+                                        if (n < 1) { slideIndex = slides.length }
+                                        for (i = 0; i < slides.length; i++) {
+                                            slides[i].style.display = "none";
+                                        }
+                                        for (i = 0; i < dots.length; i++) {
+                                            dots[i].className = dots[i].className.replace(" active", "");
+                                        }
+                                        slides[slideIndex - 1].style.display = "block";
+                                        dots[slideIndex - 1].className += " active";
+                                    }
+                                </script>
+                            </figure>
+                            <!-- Figure Ends -->
+
+                        </article>
+                        <!-- Article Ends -->
+                    </div>
+                    <!-- Sidebar Starts -->
+                    <div class="sidebar col-xs-12 col-md-4">
+                        <!-- Categories Widget Starts -->
+                        <div class="widget">
+                            <h4 class="fw-normal baslik" style="color:#ffb400">Proje Detayı</h4>
+                            <ul class="unstyled nav nav-tabs">
+                                <p>
+                                    Konya Selçuklu'da faailyet gösteren online market oluşumu Bi Koşu Gelsin
+                                    firmasının web sitesini teslim etmenin gururunuu yaşıyoruz.Firmanın talebi
+                                    ve ihtiyaçları doğrultusunda wordpress olarak tasarlanmıştır.Sitenin görsel
+                                    ve video içeriklerinin tamamı SoftForRange ekibi imzası taşımaktadır.Siteyi
+                                    incelemek için:
+
+
+
+                                </p>
+                                <a href="https://bikosugelsin.com/" class="custom-button "
+                                    data-target="https://bikosugelsin.com/" style="color:white" target="_blank">SİTEYE
+                                    GİT</a>
+
+                            </ul>
+                        </div>
+                        <!-- Categories Widget Ends -->
+
+
+                    </div>
+                    <!-- Sidebar Ends -->
+                </div>
+            </div>
+        </section>
+        <!-- Section Content Ends -->
+        <!-- Footer Section Starts -->
+        <footer class="footer text-center">
+            <!-- Container Starts -->
+            <div class="container">
+                <!-- Copyright Text Starts -->
+
+                <p> SoftForRange ©2022</p>
+
+
+                <!-- Copyright Text Ends -->
+                <!-- Social Media Links Starts -->
+                <div class="social-icons">
+                    <ul class="social">
+                        <li>
+                            <a class="twitter" href="https://twitter.com/softforrange" title="twitter" target="_blank"></a>
+                        </li>
+                        <li>
+                            <a class="facebook" href="https://www.facebook.com/profile.php?id=100081611833933" title="facebook" target="_blank"></a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a class="instagram" href="https://www.instagram.com/softforrange/?hl=tr" title="instagram" target="_blank"></a>
+                        </li>
+                        <li>
+                            <a class="linkedin" href="https://www.linkedin.com/company/softforrange/" title="linkedin" target="_blank"></a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <!-- Social Media Links Ends -->
+            </div>
+            <!-- Container Ends -->
+        </footer>
+        <!-- Footer Section Starts -->
+        <!-- Back To Top Starts -->
+        <div id="back-top-wrapper" class="hidden-xs">
+            <p id="back-top">
+                <a href="blog.html#top"><span></span></a>
+            </p>
+        </div>
+        <!-- Back To Top Ends -->
+    </div>
+    <!-- Wrapper Ends -->
+
+    <!-- Template JS Files -->
+    <script type="text/javascript" src="../static/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../static/js/plugins/jquery.easing.1.3.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../static/js/plugins/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="../static/js/plugins/jquery.filterizr.js"></script>
+    <script type="text/javascript" src="../static/js/plugins/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="../static/js/plugins/jquery.singlePageNav.min.js"></script>
+
+    <!-- Live Style Switcher JS File - only demo -->
+    <script type="text/javascript" src="../static/js/styleswitcher.js"></script>
+
+    <!-- Main JS Initialization File -->
+    <script type="text/javascript" src="../static/js/custom.js"></script>
+
+    <!-- Revolution Slider Initialization Ends -->
+</body>
+
+
+<!-- Mirrored from slimhamdi.net/salimo/demos/blog-post.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 May 2022 09:28:38 GMT -->
+
+</html>
